@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Colorlib Alotan Barber Shop Template</title>
+    <title>Jenderal Barbershop</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -26,7 +26,7 @@
      
       <nav class="navbar navbar-expand-md navbar-dark bg-light">
         <div class="container">
-          <a class="navbar-brand" href="index.html">Alotan</a>
+          <a class="navbar-brand" href="index.html">Jenderal Barbershop</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -34,10 +34,10 @@
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Beranda</a>
+                <a class="nav-link active" href="index.html">Beranda</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="hairstyle.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Model</a>
+                <a class="nav-link dropdown-toggle" href="hairstyle.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Model</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="hairstyle.html">Crew Cut</a>
                   <a class="dropdown-item" href="hairstyle.html">Regular Hair Cut</a>
@@ -47,12 +47,14 @@
                 </div>
  
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+			   <li class="nav-item">
+                <a class="nav-link" href="produk.html">Produk</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" href="about.html">Tentang</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Kontak</a>
             </ul>
             
           </div>
@@ -60,16 +62,13 @@
       </nav>
     </header>
     <!-- END header -->
-
-    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_1.jpg);">
+ <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_1.jpg);">
       <div class="container">
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
 
             <div class="mb-5 element-animate">
-              <!-- <img src="images/banner_text_1.png" alt="Image placeholder" class="img-md-fluid"> -->
-              <h1 class="mb-4">Hair Styles</h1>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, quo!</p>
+              <img src="images/banner_text_1.png" alt="Image placeholder" class="img-md-fluid">
             </div>
 
           </div>
@@ -78,11 +77,7 @@
     </section>
     <!-- END section -->
 
-    
-
-
-   
- <section class="quick-info element-animate" data-animate-effect="fadeInLeft">
+    <section class="quick-info element-animate" data-animate-effect="fadeInLeft">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 bgcolor">
@@ -120,136 +115,55 @@
       </div>
     </section>
     <!-- END section -->
+
+    <!-- konten pomade -->
+	<section class="site-section">
+	<div class="container">
+	<h2>Data Produk</h2>
+	
+	<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>no</th>
+			<th>nama</th>
+			<th>harga</th>
+			<th>berat</th>
+			<th>foto</th>
+			<th>aksi</th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php $nomor=1; 
+		$ambil=$koneksi->query("SELECT * FROM produk)
+		while($pecah = $ambil=>fetch_assoc()");{ ?>
+		<tr>
+			<td><?php echo $nomor; ?></td>
+			<td><?php echo $pecah['nama_produk']; ?></td>
+			<td><?php echo $pecah['harga_produk']; ?></td>
+			<td><?php echo $pecah['berat_produk']; ?></td>
+			<td><?php echo $pecah['foto_produk']; ?></td>
+			<td>
+				<a href="" class="btn-danger btn">Hapus</a>
+				<a href="" class="btn btn-warning">Edit</a>
+			</td>
+		</tr>
+		<?php $nomor++; ?>
+		<?php } ?>
+	</tbody>
+	</table>
+	</div>
+	</section>
+
+    <!-- END section -->
     
-
-    <section class="site-section pb-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 video-wrap mb-5">
-            <img src="images/img_5.jpg" alt="Image placeholder" class="img-fluid">
-          </div>
-          <div class="col-md-6 pl-md-5">
-            <h3>Crew Cut</h3>
-            <p class="lead">Expert Barber</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facere a excepturi quod impedit rerum ipsum totam incidunt, necessitatibus id veritatis maiores quos saepe dolore commodi magnam fugiat. Incidunt, omnis.</p>
-            <p>Nobis quae eaque facere architecto eligendi, voluptas quasi, blanditiis aperiam possimus inventore quis nam! Cupiditate necessitatibus, voluptatem excepturi placeat exercitationem quos vitae ut vero dolorem, provident sit odio porro facere.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-
-    <section class="pt-5 pb-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 video-wrap mb-5">
-            <img src="images/img_3.jpg" alt="Image placeholder" class="img-fluid">
-          </div>
-          <div class="col-md-6 pl-md-5">
-            <h3>Regular Hair Cut</h3>
-            <p class="lead">Expert Barber</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facere a excepturi quod impedit rerum ipsum totam incidunt, necessitatibus id veritatis maiores quos saepe dolore commodi magnam fugiat. Incidunt, omnis.</p>
-            <p>Nobis quae eaque facere architecto eligendi, voluptas quasi, blanditiis aperiam possimus inventore quis nam! Cupiditate necessitatibus, voluptatem excepturi placeat exercitationem quos vitae ut vero dolorem, provident sit odio porro facere.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-
-    <section class="pt-5 pb-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 video-wrap mb-5">
-            <img src="images/img_2.jpg" alt="Image placeholder" class="img-fluid">
-          </div>
-          <div class="col-md-6 pl-md-5">
-            <h3>Hair Color</h3>
-            <p class="lead">Expert Barber</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facere a excepturi quod impedit rerum ipsum totam incidunt, necessitatibus id veritatis maiores quos saepe dolore commodi magnam fugiat. Incidunt, omnis.</p>
-            <p>Nobis quae eaque facere architecto eligendi, voluptas quasi, blanditiis aperiam possimus inventore quis nam! Cupiditate necessitatibus, voluptatem excepturi placeat exercitationem quos vitae ut vero dolorem, provident sit odio porro facere.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-
+    
    
-    
-    <section class="site-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center">
-            <h2>More Hair Styles</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum magnam illum maiores adipisci pariatur, eveniet.</p>
-          </div>
-        </div>
-        <div class="row top-destination">
-          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="images/img_1.jpg" alt="Image placeholder">
-              <h2>Beard Shaving</h2>
-              <p>Learn More</p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="images/img_2.jpg" alt="Image placeholder">
-              <h2>Crew Cut</h2>
-              <p>Learn More</p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="images/img_3.jpg" alt="Image placeholder">
-              <h2>Beard Trim</h2>
-              <p>Learn More</p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="images/img_4.jpg" alt="Image placeholder">
-              <h2>Shampoo + Hair Cut</h2>
-              <p>Learn More</p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="images/img_5.jpg" alt="Image placeholder">
-              <h2>Hair Color</h2>
-              <p>Learn More</p>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-            <a href="#" class="place">
-              <img src="images/img_6.jpg" alt="Image placeholder">
-              <h2>Crew Hair Cut</h2>
-              <p>Learn More</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-
-    <section class="section-cover cta" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_2.jpg);">
-      <div class="container">
-        <div class="row justify-content-center align-items-center intro">
-          <div class="col-md-8 text-center element-animate">
-            <h2 class="mb-4"><span>Appoint a Haircut Today and</span> Get 25% discount</h2>
-            <p><a href="#" class="btn btn-black">Make an Appointment</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-
-
     <footer class="site-footer">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-4">
-            <h3 class="mb-4">About</h3>
-            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, quod!</p>
+            <h3 class="mb-4">Jenderal Barbershop</h3>
+            <p class="mb-4">Profesional dan Berkelas</p>
             <ul class="list-unstyled ">
               <li class="d-flex"><span class="mr-3"><span class="icon ion-ios-location"></span></span><span class="">34 Street Name, City Name Here, United States</span></li>
               <li class="d-flex"><span class="mr-3"><span class="icon ion-ios-telephone"></span></span><span class="">+1 242 4942 290</span></li>
@@ -293,7 +207,7 @@
         <div class="row justify-content-center">
           <div class="col-md-7 text-center">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!--Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </div>
         </div>

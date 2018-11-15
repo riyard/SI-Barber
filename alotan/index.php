@@ -1,6 +1,8 @@
 <?php
 //koneksi ke data base
 $koneksi = new mysqli("localhost","root","","pomade");
+if $koneksi = 1{
+echo "abankaka"};
 ?>
 <!doctype html>
 <html lang="en">
