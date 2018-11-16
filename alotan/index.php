@@ -1,13 +1,10 @@
-<?php
-//koneksi ke data base
-$koneksi = new mysqli("localhost","root","","pomade");
-if $koneksi = 1{
-echo "abankaka"};
-?>
 <!doctype html>
+<?php
+include ('koneksi.php');
+?>
 <html lang="en">
   <head>
-    <title>Jenderal Barbershop</title>
+    <title>JENDERAL BARBERSHOP</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -32,7 +29,7 @@ echo "abankaka"};
      
       <nav class="navbar navbar-expand-md navbar-dark bg-light">
         <div class="container">
-          <a class="navbar-brand" href="index.html">Jenderal Barbershop</a>
+          <a class="navbar-brand" href="index.php">ADMIN JENDERAL</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -42,25 +39,15 @@ echo "abankaka"};
               <li class="nav-item">
                 <a class="nav-link active" href="index.php">Beranda</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="hairstyle.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Model</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="hairstyle.html">Crew Cut</a>
-                  <a class="dropdown-item" href="hairstyle.html">Regular Hair Cut</a>
-                  <a class="dropdown-item" href="hairstyle.html">Shampoo + Cut</a>
-                  <a class="dropdown-item" href="hairstyle.html">Beard Trim with Razor</a>
-                  <a class="dropdown-item" href="hairstyle.html">Hair Color</a>
-                </div>
- 
-              </li>
+              
 			   <li class="nav-item">
                 <a class="nav-link" href="produk.php">Produk</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">Tentang</a>
+                <a class="nav-link" href="pemesanan.php">Pemesanan</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Kontak</a>
+                <a class="nav-link" href="pelanggan.php">Pelanggan</a>
             </ul>
             
           </div>
@@ -75,7 +62,7 @@ echo "abankaka"};
           <div class="col-md-8 text-center">
 
             <div class="mb-5 element-animate">
-              <img src="images/banner_text_1.png" alt="Image placeholder" class="img-md-fluid">
+              <img src="images/jendral.png" alt="Image placeholder" class="img-md-fluid">
             </div>
 
           </div>

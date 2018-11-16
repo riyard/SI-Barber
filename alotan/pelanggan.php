@@ -36,11 +36,11 @@ include ('koneksi.php');
           </button>
 
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
-                        <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+            <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
               <li class="nav-item">
                 <a class="nav-link active" href="index.php">Beranda</a>
               </li>
-			  
+              
 			   <li class="nav-item">
                 <a class="nav-link" href="produk.php">Produk</a>
               </li>
@@ -113,11 +113,11 @@ include ('koneksi.php');
     <!-- konten pomade -->
 	<section class="site-section">
 	<div class="container">
-	<h2>Data Produk</h2>
+	<h2>Data Pelanggan</h2>
 	
 	<?php
 		include ('koneksi.php');
-		$sql='select * from produk';
+		$sql='select * from pelanggan';
 		$ambil=mysqli_query($koneksi,$sql);
 	?>
 	
@@ -126,9 +126,8 @@ include ('koneksi.php');
 		<tr>
 			<th>no</th>
 			<th>nama</th>
-			<th>harga</th>
-			<th>berat</th>
-			<th>foto</th>
+			<th>user</th>
+			<th>telephone</th>
 			<th>aksi</th>
 		</tr>
 	</thead>
@@ -139,13 +138,11 @@ include ('koneksi.php');
 		?>
 		<tr>
 			<td><?php echo $nomor++; ?></td>
-			<td><?php echo $data['nama_produk']; ?></td>
-			<td><?php echo $data['harga_produk']; ?></td>
-			<td><?php echo $data['berat_produk']; ?></td>
-			<td><?php echo $data['foto_produk']; ?></td>
+			<td><?php echo $data['nama_pelanggan']; ?></td>
+			<td><?php echo $data['user']; ?></td>
+			<td><?php echo $data['telepon_pelanggan']; ?></td>
 			<td>
-				<a href="" class="btn-danger btn">Hapus</a>
-				<a href="" class="btn btn-warning">Edit</a>
+				<a href="" class="btn btn-danger">Hapus</a>
 			</td>
 		</tr>
 		<?php } ?>
